@@ -1,0 +1,112 @@
+@import 'normalize';
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*,*:before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+.header {
+    padding: 20px 70px 32px 20px;
+    display: flex;
+    align-items: center;
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20px;
+        height: 17px;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-right: 28px;
+        span {
+            display: block;
+            width: 20px;
+            height: 3px;
+            background-color: #1F2022;
+            border-radius: 20px;
+        }
+    }
+    &__logo {
+        margin-right: 59px;
+    }
+    &__form {
+        padding: 0 17px 0 0;
+        max-width: 830px;
+        width: 50%;
+        background-color: #f8f8f8;
+        border-radius: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            padding: 12px 23px;
+            width: 90%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            &::placeholder {
+                font-family: 'Segoe UI', sans-serif;
+            }
+        }
+        button {
+            width: 19px;
+            height: 19px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: transparent;
+        }
+    }
+    &__icon {
+        &-search {
+            fill:#000;
+        }
+        &-video, &-app, &-notify {
+            fill: #000;
+            opacity: .24;
+        }
+    }
+    .icon--style {
+        transition: .2s linear;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+        margin-left: auto;
+        margin-right: 45px;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            &:hover .icon--style {
+                opacity: .8;
+            }
+        }
+    }
+    &__user {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            object-fit: cover;
+            object-position: top;
+            height: 70px;
+        }
+    }
+}
