@@ -36,6 +36,7 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box;scroll-behavior:smooth}
 body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
 *,::after,:before{-webkit-box-sizing:inherit;box-sizing:inherit;margin:0;padding:0}
 img{display:inline-block;vertical-align:middle;max-width:100%;height:auto}
+h1,h2,h3{margin:0;padding:0;line-height:1.2}
 .header{padding:20px 70px 32px 20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .header__btn{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;width:20px;height:17px;background-color:#fff;border:none;outline:0;cursor:pointer;margin-right:28px}
 .header__btn span{display:block;width:20px;height:3px;background-color:#1f2022;border-radius:20px}
@@ -55,3 +56,46 @@ img{display:inline-block;vertical-align:middle;max-width:100%;height:auto}
 .header__menu a:hover .icon--style{opacity:.8}
 .header__user{display:inline-block;width:40px;height:40px;border-radius:50%;overflow:hidden}
 .header__user img{-o-object-fit:cover;object-fit:cover;-o-object-position:top;object-position:top;height:70px}
+.main{padding:60px 0 40px 20px;display:-webkit-box;display:-ms-flexbox;display:flex}
+.main__nav{max-width:230px;width:100%}
+.main__home{margin-bottom:60px}
+.main__libary{margin-bottom:60px}
+.main__subscr h2{font-size:18px;font-weight:500;margin-bottom:30px}
+.main__link{text-decoration:none;color:rgba(137,137,137,.5);font-size:16px;font-weight:500;display:grid;margin-bottom:28px;-webkit-transition:.15s linear;transition:.15s linear;position:relative;padding-left:30px;cursor:pointer}
+.main__link:last-child{margin-bottom:0}
+.main__link:hover{color:red}
+.main__link:hover .main__icon{fill:red;opacity:1}
+.main__icon{position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);fill:#898989;opacity:.5;-webkit-transition:.15s linear;transition:.15s linear}
+.main--home{fill:red;opacity:1}
+.main--home-link{color:red}
+.main__subscr-link{display:block;text-decoration:none;color:rgba(137,137,137,.8);font-size:16px;font-weight:400;margin-bottom:23px;-webkit-transition:.15s linear;transition:.15s linear}
+.main__subscr-link img{margin-right:10px}
+.main__subscr-link:nth-child(7){margin-bottom:150px}
+.main__subscr-link:hover{color:#565656}
+.main__content{overflow:hidden}
+.main__name{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-column-gap:20px;column-gap:20px;margin-bottom:30px}
+.main__name-pic{width:50px;height:50px;border-radius:50%;overflow:hidden}
+.main__name-pic img{-o-object-fit:cover;object-fit:cover;height:150px}
+.main__name h1{font-size:26px;font-weight:700}
+.main__slider{height:250px;overflow:hidden}
+.main__slide{max-width:250px;width:100%}
+.main__slide figure{position:relative;margin-bottom:10px}
+.main__slide figure figcaption{position:absolute;bottom:15px;right:20px;color:#fff;background:rgba(0,0,0,.1);padding:4px 8px;border-radius:12px;font-size:14px}
+.main__slide h2{font-size:16px;font-weight:500;margin-bottom:4px}
+.main__slide-desc{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.main__slide-desc p{font-size:13px;font-weight:400;color:#c2c2c2}
+.main__rec{margin-top:50px}
+.main__rec h2{font-size:26px;font-weight:500}
+.main__rec-slider{margin-top:30px}
+.main__rec-slide{max-width:540px;width:100%}
+.main__rec-slide figure{position:relative;margin-bottom:10px}
+.main__rec-slide figure figcaption{position:absolute;bottom:15px;right:20px;color:#fff;background:rgba(0,0,0,.1);padding:4px 8px;border-radius:12px;font-size:14px}
+.main__rec-slide h2{font-size:16px;font-weight:500;margin-bottom:4px}
+.main__rec-slide_desc{display:-webkit-box;display:-ms-flexbox;display:flex}
+.main__rec-slide_desc p{font-size:13px;font-weight:400;color:#c2c2c2}
+.main__rec-slide_desc p:nth-child(2){margin-left:10px}
+.main__rec-slide_desc p:nth-child(3){margin-left:auto}
+.main__food{margin-top:50px}
+.main__food-title{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-column-gap:20px;column-gap:20px;margin-bottom:30px}
+.main__food-title h2{font-size:26px;font-weight:500;color:#19202c}
+.main__food-title p{font-size:16px;font-weight:400;color:#c2c2c2;-webkit-transform:translateY(5px);transform:translateY(5px)}
