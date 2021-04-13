@@ -1,4 +1,10 @@
 @import 'normalize';
+@mixin point($w) {
+    @media only screen and (max-width: $w + 'px') {
+        @content;
+    }
+}
+ 
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -15,6 +21,10 @@ body {
     margin: 0;
     padding: 0;
 }
+hr {
+    border-top: 1px solid #979797;
+    opacity: .5;
+}
 img {
     display: inline-block;
     vertical-align: middle;
@@ -30,6 +40,9 @@ h1,h2,h3 {
     padding: 20px 70px 32px 20px;
     display: flex;
     align-items: center;
+    @include point(500) {
+        display: none;
+    }
     &__btn {
         display: flex;
         flex-direction: column;
@@ -123,6 +136,9 @@ h1,h2,h3 {
     padding: 60px 0 40px 20px;
     display: flex;
     /* column-gap: 100px; */
+    @include point(500) {
+        display: none;
+    }
     &__nav{
         max-width: 230px;
         width: 100%;
@@ -326,5 +342,111 @@ h1,h2,h3 {
                 transform: translateY(5px);
             }
         }
+    }
+}
+//MOBILE
+.mobile {
+    display: none;
+    @include point(500) {
+        display: block;
+    }
+    &__header {
+        padding: 10px 15px 20px 15px;
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        margin-right: auto;
+    }
+    &__zalypa {
+        margin-right: 25px;
+    }
+    &__user {
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        img {
+            object-fit: cover;
+            height: 75px;
+        }
+    }
+    &__cards {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 30px;
+    }
+    &__card {
+        figure {
+            position: relative;
+            margin-bottom: 8px;
+            figcaption {
+                position: absolute;
+                right: 5%;
+                bottom: 5%;
+                color: #ffffff;
+                background: rgba(#000000, .1);
+                padding: 4px 8px;
+                border-radius: 12px;
+                font-size: 14px;
+            }
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        &-desc {
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-size: 13px;
+                font-weight: 400;
+                color: #c2c2c2;
+            }
+        }
+    }
+    &__footer {
+        margin-top: 15px;
+        padding: 0 15px;
+        &-inner {
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 5px;
+            &:hover {
+                .mobile__footer-icon {
+                    fill: #FF0000;
+                }
+                .mobile__footer-btn {
+                    color: #FF0000;
+                }
+            }
+        }
+        &-icon {
+            fill: #898989;
+            opacity: .8;
+            transition: .15s linear;
+        }
+        &-btn {
+            color: #898989;
+            opacity: .8;
+            font-size: 10px;
+            font-weight: 500;
+            transition: .15s linear;
+        }
+    }
+    &--red-icon {
+        fill: #FF0000;
+    }
+    &--red-text {
+        color: #FF0000;
     }
 }
